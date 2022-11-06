@@ -1,13 +1,20 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { useEthers } from 'vue-dapp';
+import Connect from '../components/reusable/Connect.vue';
 
-const count = ref(0)
-const add = () => count.value++
+
+const { address, signer, network } = useEthers()
+
 </script>
 
 <template>
-  <div class="text-center">
-    <p>Home: {{ count }}</p>
-    <button class="btn" @click="add">Count</button>
-  </div>
+Test
+<div v-if="address != ''">
+    Connecté
+</div>
+<div v-else>
+    Pas connecté Connard
+    <br />
+    <Connect />
+</div>
 </template>

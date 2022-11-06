@@ -23,9 +23,6 @@ const connectors = [
 </script>
 
 <template>
-  <layout-header />
-
   <router-view></router-view>
-
   <vd-board :connectors="connectors" dark />
 </template>
