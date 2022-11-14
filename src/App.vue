@@ -6,7 +6,7 @@ const infuraId = ''
 
 const connectors = [
   new MetaMaskConnector({
-    appUrl: 'http://localhost:3000',
+    appUrl: 'http://localhost:3001',
   }),
   new WalletConnectConnector({
     qrcode: true,

@@ -1,4 +1,4 @@
-export const oldBannerAbi = 
+export const distributorAbi = 
 [
     {
       "anonymous": false,
