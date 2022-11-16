@@ -4,6 +4,7 @@ import router from './router'
 import './index.css'
 import { VueDapp } from 'vue-dapp'
 import { createPinia } from 'pinia'
+import 'virtual:windi.css'
 import { createI18n } from 'vue-i18n'
 import messages from '@intlify/vite-plugin-vue-i18n/'
 

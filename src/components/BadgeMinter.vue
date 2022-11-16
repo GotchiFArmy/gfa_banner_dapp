@@ -54,17 +54,29 @@ async function collectBanner(){
     }
 }
 
+function onInputChange() {
+    if (inputGhst.value < 10) {
+        inputGhst.value = 10
+    }
+}
+
 </script>
 
 <template>
-    Montant en GHST (10 minimum)<input type="number" v-model="inputGhst" @change=""/>
+    <div class="flex flex-row items-center mt-4">
+        <p class="mr-4">Montant en GHST (10 minimum)</p>
+        <input type="number" v-model="inputGhst" @change="onInputChange" class="text-gfa-white border-gfa-500 border-1 rounded-sm bg-gfa-dark p-3px focus:border-4 focus:p-0 focus:outline-none w-20"/>
+    </div>
     <div v-if="approved.banner4.lt(BigNumber.from(inputGhst).mul(BigNumber.from(10).pow(18)))">
-        Avant de pouvoir acheter l'insigne, vous devez signer une première transaction pour autoriser notre contrat à prélever des GHST sur votre wallet
-        <br />
-        <button @click="approveGhst">Approuver</button>
+        <p class="text-base mt-4">Avant de pouvoir acheter l'insigne, vous devez signer une première transaction pour autoriser notre contrat à prélever des GHST sur votre wallet</p>
+        <div class="flex flex-row place-content-center my-6">
+            <button class="button" @click="approveGhst">Approuver</button>
+        </div>
     </div>
     <div v-else>
-        <button @click="collectBanner">Acheter l'insigne</button>
+        <div class="flex flex-row place-content-center my-6">
+            <button class="button" @click="collectBanner">Acheter l'insigne</button>
+        </div>
     </div>
     <TxStatus />
 </template>

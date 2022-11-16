@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import LayoutHeader from './components/LayoutHeader.vue'
 import { MetaMaskConnector, WalletConnectConnector, CoinbaseWalletConnector } from 'vue-dapp'
+import './assets/fonts/opensans/open-sans-v34.css'
+import './assets/fonts/poppins/poppins.css'
 
 const infuraId = ''
 

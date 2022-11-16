@@ -10,14 +10,21 @@ const { address } = useEthers()
 </script>
 
 <template>
-<div v-if="address != ''">
-    Connecté {{ address  }}<br />
-    <BadgeDisplayer />
-    <BadgeMinter />
-</div>
-<div v-else>
-    Pas connecté
-    <br />
-    <Connect />
-</div>
+    <div class="container mx-auto px-4 pt-4 bg-gfa-dark text-gfa-white font-sans min-h-400px">
+        <div class="flex flex-col">
+            <template v-if="address != ''">
+                <span class="fat_text text-lg">
+                    Wallet {{ address }} connecté
+                </span>
+                <BadgeDisplayer />
+                <BadgeMinter />
+            </template>
+            <template v-else>
+                <p class="text-center">
+                    Pas connecté
+                </p>
+                <Connect />
+            </template>
+        </div>
+    </div>
 </template>

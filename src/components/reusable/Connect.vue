@@ -26,8 +26,8 @@ watch(network, async (newNetwork, oldNetwork) => {
 </script>
 
 <template>
-    <div v-if="address == ''" class="mt-4 leading-tight">
-        <button @click="open">Connecter</button>
+    <div v-if="address == ''" class="mt-4 leading-tight text-center">
+        <button class="button" @click="open">Connecter mon wallet</button>
     </div>
     <!-- <BadgeDisplayer /> -->
     
