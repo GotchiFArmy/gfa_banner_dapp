@@ -1,0 +1,17 @@
+{
+  "wallet": {
+    "not_connected": "Vous devez connecter votre wallet pour obtenir votre insigne",
+    "connect": "Connecter mon wallet"
+  },
+  "welcome": {
+    "title": "Bienvenue à toi !",
+    "message": "Tu es maintenant un membre à part entière de la Gotchi French Army !!"
+  },
+  "badges_display": {
+    "no_badges": "Tu ne possède aucun badge de la GFA"
+  },
+  "badges": {
+    "title": "Tes badges",
+    "loading": "Chargement ...."
+  }
+}

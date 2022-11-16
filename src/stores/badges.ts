@@ -50,7 +50,8 @@ export const useBadges = defineStore({
             badge2,
             badge3,
             badge4,
-            loaded: false
+            loaded: false,
+            purchased: false
         }
     }, 
     actions: {

@@ -3,6 +3,8 @@ import vue from '@vitejs/plugin-vue'
 import inject from '@rollup/plugin-inject'
 import { vueI18n } from '@intlify/vite-plugin-vue-i18n'
 import path from 'path'
+import { dirname } from 'node:path'
+import { fileURLToPath } from 'url'
 import WindiCSS from 'vite-plugin-windicss'
 
 // https://vitejs.dev/config/
@@ -14,7 +16,7 @@ export default defineConfig({
       // if you want to use Vue I18n Legacy API, you need to set `compositionOnly: false`
       // compositionOnly: false,
       // you need to set i18n resource including paths !
-      include: path.resolve(__dirname, './src/locales/**')
+      include: path.resolve(dirname(fileURLToPath(import.meta.url)), './src/locales/**')
     })
     
   ],

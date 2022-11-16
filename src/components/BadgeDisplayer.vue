@@ -10,10 +10,10 @@
 </script>
 
 <template>  
-    <div class="text-lg my-4"> Vos badges</div>
+    <div class="text-lg my-4">{{ $t('badges.title')}}</div>
     <div v-if="badges.loaded">
         <div v-if="badges.getBadgesArray.length === 0">
-            <p>Vous n'avez aucun badge</p>
+            <p>{{ $t('badges_display.no_badges')}}</p>
         </div>
         <div v-else class="flex flex-row">
             <template v-for="badge in badges.getBadgesArray">
@@ -24,5 +24,5 @@
             </template>
         </div>
     </div>
-    <span v-else>Chargement ....</span>
+    <span v-else>{{ $t('badges.loading') }}</span>
 </template>

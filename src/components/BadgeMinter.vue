@@ -21,6 +21,8 @@ onBeforeMount( async() => {
     await approved.loadApproveStatus()
 })
 
+const purchasing: Ref<boolean> = ref<boolean>(false)
+
 async function approveGhst(){
     if (address.value && signer.value) {
         const ghst = new ethers.Contract(import.meta.env.VITE_GHST, erc20Abi, signer.value)
@@ -40,6 +42,7 @@ async function approveGhst(){
 
 async function collectBanner(){
     if (address.value && signer.value) {
+        purchasing.value = true
         const bannerContract = new ethers.Contract(import.meta.env.VITE_DISTRIBUTOR, distributorAbi, signer.value)
         bannerContract.connect(signer.value)
         await tx.execTx2(
@@ -50,6 +53,10 @@ async function collectBanner(){
             ],
             `Insigne GFA en cours de distribution`
         )
+        if (Object.keys(tx.txReceipt).length > 0 && tx.txReceipt.status != 0) {
+            badges.purchased = true
+        }
+        purchasing.value = false
         await badges.loadBadges()
     }
 }
@@ -74,7 +81,7 @@ function onInputChange() {
         </div>
     </div>
     <div v-else>
-        <div class="flex flex-row place-content-center my-6">
+        <div v-if="!purchasing" class="flex flex-row place-content-center my-6">
             <button class="button" @click="collectBanner">Acheter l'insigne</button>
         </div>
     </div>

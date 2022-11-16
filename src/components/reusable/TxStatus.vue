@@ -4,7 +4,7 @@
     const tx = useTx()
 </script>
 <template>
-    <template  v-if="tx.show">
+    <div  v-if="tx.show" class="border-2 border-gfa-500 p-4 my-4">
         <p v-if="tx.txTitle != ''">
             {{ tx.txTitle }}
         </p>
@@ -32,5 +32,5 @@
                 See the tx in polygonscan
             </a>
         </div>
-    </template>
+    </div>
 </template>

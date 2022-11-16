@@ -3,9 +3,11 @@ import { useEthers } from 'vue-dapp';
 import BadgeDisplayer from '../components/BadgeDisplayer.vue';
 import BadgeMinter from '../components/BadgeMinter.vue'
 import Connect from '../components/reusable/Connect.vue';
-
+import Success from '../components/Success.vue';
+import { useBadges } from '../stores/badges';
 
 const { address } = useEthers()
+const badges = useBadges()
 
 </script>
 
@@ -17,11 +19,12 @@ const { address } = useEthers()
                     Wallet {{ address }} connecté
                 </span>
                 <BadgeDisplayer />
-                <BadgeMinter />
+                <BadgeMinter v-if="!badges.purchased" />
+                <Success v-else />
             </template>
             <template v-else>
                 <p class="text-center">
-                    Pas connecté
+                    {{ $t("wallet.not_connected" )}}
                 </p>
                 <Connect />
             </template>

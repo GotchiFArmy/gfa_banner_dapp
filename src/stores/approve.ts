@@ -27,7 +27,6 @@ async function loadApproveStatus(bannerContract: string) {
     let value = BigNumber.from(0)
     if (address.value && signer.value) {
         try {
-            debugger
             const contract = new ethers.Contract(import.meta.env.VITE_GHST, erc20Abi as ContractInterface, signer.value)
             contract.connect(signer.value)
             const response = await contract.functions.allowance(address.value, bannerContract)

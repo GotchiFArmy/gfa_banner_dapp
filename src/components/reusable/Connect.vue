@@ -27,8 +27,6 @@ watch(network, async (newNetwork, oldNetwork) => {
 
 <template>
     <div v-if="address == ''" class="mt-4 leading-tight text-center">
-        <button class="button" @click="open">Connecter mon wallet</button>
+        <button class="button" @click="open">{{ $t('wallet.connect')}}</button>
     </div>
-    <!-- <BadgeDisplayer /> -->
-    
 </template>
