@@ -9,27 +9,27 @@
             {{ tx.txTitle }}
         </p>
         <div v-if="tx.txException != null">
-            <p>Error during transaction</p>
+            <p>{{ $t('tx.exception') }}</p>
             <p v-if="typeof tx.txException.message == 'string'" class="text-error">
                 {{ tx.txException.message }}
             </p>
         </div>
         <p v-else-if="Object.keys(tx.txReceipt).length == 0 && Object.keys(tx.txResponse).length == 0">
-            Please validate the transaction in your wallet
+            {{ $t('tx.validate')}}
         </p>
         <p v-else-if="Object.keys(tx.txReceipt).length == 0">
-            Transaction in progress        
+            {{ $t('tx.in_progress') }}        
         </p>
         <p v-else-if="Object.keys(tx.txReceipt).length > 0 && tx.txReceipt.status != 0">
-            Transaction has succeeded
+            {{ $t('tx.success') }}
         </p>
         <p v-else>
-            Transaction has failed
+            {{ $t('tx.failed') }}
         </p>
-        <div v-if="tx.txResponse != null">
-            <p>Transaction hash: {{ tx.txResponse.hash }}</p>
+        <div v-if="tx.txResponse.hash != null">
+            <p>{{ $t('tx.hash') }}: {{ tx.txResponse.hash }}</p>
             <a target="blank" :href="tx.getTxScanUrl">
-                See the tx in polygonscan
+                {{ $t('tx.scan') }}
             </a>
         </div>
     </div>

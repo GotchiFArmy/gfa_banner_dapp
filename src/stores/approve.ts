@@ -3,6 +3,7 @@ import { TransactionResponse } from "@ethersproject/providers";
 import { defineStore } from "pinia";
 import { useEthers } from "vue-dapp";
 import { erc20Abi } from "../consts/abis/erc20Abi";
+import { uchildErc20Abi } from "../consts/abis/uchild-erc20-abi";
 
 const { address, signer, provider } = useEthers()
 

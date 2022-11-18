@@ -13,5 +13,17 @@
   "badges": {
     "title": "Tes badges",
     "loading": "Chargement ...."
+  },
+  "newBadge": {
+    "title": "Félicitations !!!",
+    "message": "Tu viens d'ajouter un nouveau badge à ta collection !"
+  },
+  "tx": {
+    "validate": "Veuillez valider la transaction dans votre wallet",
+    "in_progress": "Transaction en cours",
+    "failed": "La transaction a échoué",
+    "hash": "hash de la transaction",
+    "scan": "Voir la transaction dans polygonscan",
+    "exception": "Erreur durant la transaction"
   }
 }

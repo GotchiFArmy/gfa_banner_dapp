@@ -8,10 +8,13 @@
   },
   "dependencies": {
     "@intlify/vite-plugin-vue-i18n": "^3.3.1",
+    "@types/three": "0.138.0",
     "buffer": "^6.0.3",
     "ethers": "^5.5.2",
     "pinia": "^2.0.23",
     "process": "^0.11.10",
+    "three": "0.138.0",
+    "troisjs": "^0.3.4",
     "util": "^0.12.4",
     "vite-plugin-windicss": "^1.8.8",
     "vue": "^3.2.25",

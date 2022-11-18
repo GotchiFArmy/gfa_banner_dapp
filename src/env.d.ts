@@ -21,7 +21,7 @@ interface ImportMetaEnv {
   readonly VITE_BANNER2_URL: string
   readonly VITE_BANNER3_URL: string
   readonly VITE_BANNER4_URL: string
-  readonly VITE_NETWORK_ID: number
+  readonly VITE_NETWORK_ID: string
   readonly VITE_DISTRIBUTOR: string
   readonly VITE_NETWORK_SCAN: string
   // more env variables...

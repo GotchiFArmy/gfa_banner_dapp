@@ -2,5 +2,11 @@
   "wallet": {},
   "welcome": {},
   "badges_display": {},
-  "badges": {}
+  "badges": {},
+  "newBadge": {},
+  "tx": {
+    "failed": "Transaction has failed",
+    "hash": "Transaction hash",
+    "scan": "See the tx in polygonscan"
+  }
 }

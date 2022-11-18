@@ -20,7 +20,7 @@ export default defineConfig({
                     '800': '#6D0771',
                     '900': '#48054A'
                 },
-                'gfa-dark': "#080c21",
+                'gfa-dark': "#08080B",
                 'gfa-white': "#f2f2f2",
                 'gfa-pink': "#ED2D73"
             }
@@ -31,5 +31,6 @@ export default defineConfig({
         "focus:outline-none text-white bg-gfa-700 hover:bg-gfa-500 focus:ring-4 focus:ring-gfa-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2",
         fat_text: 
         "text-gfa-pink font-head font-extrabold"
-    }    
+    },
+    safelist: 'w-16 w-24 w-32 w-40 h-16 h-24 h-32 h-40'
 })
