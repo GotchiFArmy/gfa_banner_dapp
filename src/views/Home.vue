@@ -66,7 +66,7 @@ watch(network, async (newNetwork, oldNetwork) => {
             </template>
         </div>
 
-        <Firework v-if="!badges.purchased" />
+        <Firework v-if="address && !badges.purchased" />
     </div>
     
 </template>

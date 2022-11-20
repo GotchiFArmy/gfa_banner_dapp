@@ -32,5 +32,5 @@ export default defineConfig({
         fat_text: 
         "text-gfa-pink font-head font-extrabold"
     },
-    safelist: 'w-16 w-24 w-32 w-40 h-16 h-24 h-32 h-40'
+    safelist: 'w-16 w-18 w-20 w-24 w-32 h-16 h-18 h-20 h-24 h-32'
 })

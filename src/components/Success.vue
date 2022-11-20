@@ -7,23 +7,20 @@
     import moula from  '../assets/svg/moula.svg?url'
     import pg from  '../assets/svg/pg.svg?url'
     import sigri from  '../assets/svg/sigri.svg?url'
-    // import svg1 from '../assets/svg/1.svg?url'
-    // import svg2 from '../assets/svg/2.svg?url'
-    // import svg3 from '../assets/svg/3.svg?url'
-    // import svg4 from '../assets/svg/4.svg?url'
-    // import svg5 from '../assets/svg/5.svg?url'
-    // import svg6 from '../assets/svg/6.svg?url'
-    // import svg7 from '../assets/svg/7.svg?url'
-    // import svg8 from '../assets/svg/8.svg?url'
+    import berlin from '../assets/svg/Berlin.svg?url'
+    import sebou from '../assets/svg/Sebou.svg?url'
+
 import Gotchi from './reusable/Gotchi.vue';
     const badges = useBadges()
     const gotchis:Array<{url: string, name: string}> = [
         { name: 'BeTheCoin', url: BeTheCoin },
+        { name: 'Berlin', 'url': berlin },
         { name: 'FiFoOoO', url: fifoooo },
         { name: 'Kira', url: kira },
         { name: 'Boss', url: boss },
         { name: 'PG', url: pg },
         { name: 'Moula', url: moula },
+        { name: 'Sebou', url: sebou},
         { name: 'Sigri', url: sigri }
     ]
 </script>
@@ -39,7 +36,7 @@ import Gotchi from './reusable/Gotchi.vue';
         <div class="flex flex-wrap pt-10 items-center">
             <template v-for="gotchi of gotchis">
                 <div class="flex flex-col items-center">
-                    <Gotchi :url="gotchi.url" class="mx-2 px-1"/>
+                    <Gotchi :url="gotchi.url" :size="18" class="mx-2 px-1"/>
                     <span class="text-sm">{{ gotchi.name }}</span>
                 </div>
             </template>
