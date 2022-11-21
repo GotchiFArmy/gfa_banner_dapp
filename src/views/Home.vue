@@ -56,7 +56,6 @@ watch(network, async (newNetwork, oldNetwork) => {
                 <BadgeDisplayer />
                 <BadgeMinter v-if="!badges.purchased" />
                 <Success v-else />
-                <Success />
             </template>
             <template v-else>
                 <p class="text-center">
