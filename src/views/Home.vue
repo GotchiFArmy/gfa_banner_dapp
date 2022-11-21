@@ -28,6 +28,7 @@ const emit = defineEmits(['wallet-refresh'])
 
 watch(address, async (newAddress, oldAddress) => {
     emit('wallet-refresh')
+    await badges.loadBadges()
 })
 
 watch(network, async (newNetwork, oldNetwork) => {
