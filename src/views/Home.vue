@@ -53,9 +53,9 @@ watch(network, async (newNetwork, oldNetwork) => {
                 <span class="fat_text text-lg">
                     Wallet {{ address }} {{ $t('wallet.connected') }}
                 </span>
-                <!-- <BadgeDisplayer />
+                <BadgeDisplayer />
                 <BadgeMinter v-if="!badges.purchased" />
-                <Success v-else /> -->
+                <Success v-else />
                 <Success />
             </template>
             <template v-else>
@@ -66,7 +66,7 @@ watch(network, async (newNetwork, oldNetwork) => {
             </template>
         </div>
 
-        <Firework v-if="address && !badges.purchased" />
+        <Firework v-if="address && badges.purchased" />
     </div>
     
 </template>
