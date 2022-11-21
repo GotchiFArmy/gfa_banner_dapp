@@ -13,9 +13,14 @@ const pinia = createPinia()
 
 let lang='en'
 const langs:string[] = ['fr', 'en']
-if (langs.find(i => i == navigator.language)) {
-  lang=navigator.language
-}
+
+// We do that so fr-FR uses fr and same for en-*
+langs.forEach( (l) => {
+  if (navigator.language.startsWith(l)) {
+    lang=navigator.language  
+  }
+})
+
 const i18n = createI18n({
     locale: lang,
     fallbackLocale: 'fr',

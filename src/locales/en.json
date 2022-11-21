@@ -1,12 +1,30 @@
 {
-  "wallet": {},
-  "welcome": {},
-  "badges_display": {},
-  "badges": {},
-  "newBadge": {},
+  "wallet": {
+    "not_connected": "You need to connect your wallet in order to mint your insignia",
+    "connect": "Connect",
+    "connected": "connected"
+  },
+  "welcome": {
+    "title": "Welcome Fren !",
+    "message": "You are now a brand new member of the GotchiFarmy gang !!"
+  },
+  "badges_display": {
+    "no_badges": "You do not own ant GFA insignia"
+  },
+  "badges": {
+    "title": "Your insignias",
+    "loading": "Loading ...."
+  },
+  "newBadge": {
+    "title": "Congratulations !!!",
+    "message": "You just added a brand new insignia to your collection !"
+  },
   "tx": {
+    "validate": "Please review & confirm the transaction on your wallet",
+    "in_progress": "Transaction in progress",
     "failed": "Transaction has failed",
     "hash": "Transaction hash",
-    "scan": "See the tx in polygonscan"
+    "scan": "See the tx in polygonscan",
+    "exception": "An error has occured during the transaction"
   }
 }

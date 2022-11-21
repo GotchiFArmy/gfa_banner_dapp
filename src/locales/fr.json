@@ -1,7 +1,8 @@
 {
   "wallet": {
     "not_connected": "Vous devez connecter votre wallet pour obtenir votre insigne",
-    "connect": "Connecter mon wallet"
+    "connect": "Connecter mon wallet",
+    "connected": "connecté"
   },
   "welcome": {
     "title": "Bienvenue à toi !",

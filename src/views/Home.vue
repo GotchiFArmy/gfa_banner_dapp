@@ -51,7 +51,7 @@ watch(network, async (newNetwork, oldNetwork) => {
         <div class="flex flex-col z-1">
             <template v-if="address != ''">
                 <span class="fat_text text-lg">
-                    Wallet {{ address }} connecté
+                    Wallet {{ address }} {{ $t('wallet.connected') }}
                 </span>
                 <!-- <BadgeDisplayer />
                 <BadgeMinter v-if="!badges.purchased" />
