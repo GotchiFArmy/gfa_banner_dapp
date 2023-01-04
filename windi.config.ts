@@ -27,10 +27,12 @@ export default defineConfig({
         }
     },
     shortcuts: {
-        button:
-        "focus:outline-none text-white bg-gfa-700 hover:bg-gfa-500 focus:ring-4 focus:ring-gfa-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2",
-        fat_text: 
-        "text-gfa-pink font-head font-extrabold"
+        'button': "focus:outline-none text-white bg-gfa-700 hover:bg-gfa-500 focus:ring-4 focus:ring-gfa-300 font-medium rounded-lg text-sm px-5 py-2.5 mb-2",
+        'fat-text': "text-gfa-pink font-head font-extrabold",
+        'input-gfa': "text-gfa-white bg-gfa-dark border-gfa-500 border-1 rounded-sm p-3px focus:border-4 focus:p-0 focus:outline-none w-20 placeholder-opacity-25 placeholder-gfa-white"
     },
-    safelist: 'w-16 w-18 w-20 w-24 w-32 h-16 h-18 h-20 h-24 h-32'
+    safelist: 'w-16 w-18 w-20 w-24 w-32 h-16 h-18 h-20 h-24 h-32',
+    corePlugins: {
+        container: false
+    }
 })

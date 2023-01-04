@@ -13,7 +13,9 @@
   },
   "badges": {
     "title": "Your insignias",
-    "loading": "Loading ...."
+    "loading": "Loading ....",
+    "approve": {},
+    "purchase": {}
   },
   "newBadge": {
     "title": "Congratulations !!!",
@@ -26,5 +28,8 @@
     "hash": "Transaction hash",
     "scan": "See the tx in polygonscan",
     "exception": "An error has occured during the transaction"
+  },
+  "intro": {
+    "badge": {}
   }
 }
