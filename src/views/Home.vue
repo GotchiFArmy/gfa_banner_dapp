@@ -8,33 +8,32 @@ import Firework from '../components/Firework.vue';
 import { useBadges } from '../stores/badges';
 import { onMounted, ref, watch } from '@vue/runtime-dom';
 import { useApproves } from '../stores/approve';
+import Banner from '../components/Banner.vue';
 
 
 const badges = useBadges()
 const approve = useApproves()
 const container = ref(null)
-const width = ref(0)
-const height = ref(0)
-
-onMounted( () => {
-    width.value = container.value.offsetWidth
-    height.value = container.value.offsetHeight
-})
 
 const { address, network } = useEthers()
 const { wallet } = useWallet()
 
 const emit = defineEmits(['wallet-refresh'])
 
+onMounted( async () => {
+    await badges.loadRemainingBadges()
+})
+
+
 watch(address, async (newAddress, oldAddress) => {
     emit('wallet-refresh')
     await badges.loadBadges()
+    await badges.loadRemainingBadges()
 })
 
 watch(network, async (newNetwork, oldNetwork) => {
     const network = Number(import.meta.env.VITE_NETWORK_ID)
     console.log(newNetwork, network)
-    // if (document.hasFocus() && newNetwork?.chainId != import.meta.env.VITE_NETWORK_ID) {
     if (newNetwork?.chainId != network) {
         await wallet.connector?.switchChain(network)
     }
@@ -43,15 +42,14 @@ watch(network, async (newNetwork, oldNetwork) => {
         await approve.loadApproveStatus()
     }
 })
-
 </script>
 
-
 <template>
-    <div class="container mx-auto px-4 pt-4 bg-gfa-dark text-gfa-white font-sans h-700px" ref="container">
-        <div class="flex flex-col z-1">
+    <div class="container bg-gfa-dark text-gfa-white font-sans md:h-screen <md:h-full <md:pb-30" ref="container">
+        <div class="flex flex-col z-1 mx-5 lg:w-8/10 lg:mx-auto xl:w-7/10 2xl:w-6/10">
+            <Banner />
             <template v-if="address != ''">
-                <span class="fat_text text-lg">
+                <span class="md:fat-text md:text-lg <md:text-gfa-white <md:text-sm <sm:text-xs">
                     Wallet {{ address }} {{ $t('wallet.connected') }}
                 </span>
                 <BadgeDisplayer />
@@ -59,14 +57,41 @@ watch(network, async (newNetwork, oldNetwork) => {
                 <Success v-else />
             </template>
             <template v-else>
+                <div class="flex flex-row mb-10">
+                    <span>
+                        {{ $t('intro.s1') }} <br />
+                        {{ $t('intro.s2') }}<br /><br />
+                        <div class="flex flex-col justify-center items-center mt-5 mb-15">
+                            <img :src="badges.badge4.url" width="80" alt="{{ badges.badge4.name }}" />
+                            <span @if="badges.remainingBadge4 && badges.remainingBadge4 > 0" class="mt-5">
+                                {{ $t('intro.badge.supply', { count: badges.remainingBadge4 }) }}
+                            </span>
+                        </div>
+                        {{ $t('intro.bullets') }}<br />
+                        <ul class="list-disc list-inside">
+                            <li>{{ $t('intro.bullets1') }}</li>
+                            <li>{{ $t('intro.bullets2') }}</li>
+                            <li>{{ $t('intro.bullets3') }}</li>
+                            <li>{{ $t('intro.bullets4') }}</li>
+                            <li>{{ $t('intro.bullets5') }}</li>
+                            <li>{{ $t('intro.bullets6') }}</li>
+                        </ul>
+                    </span>
+                </div>
                 <p class="text-center">
-                    {{ $t("wallet.not_connected" )}}
+                    {{ $t("wallet.not_connected") }}
                 </p>
                 <Connect />
             </template>
         </div>
-
+        <!-- <Firework /> -->
         <Firework v-if="address && badges.purchased" />
     </div>
-    
 </template>
+
+<style>
+    .li-1 {
+        padding: .3em 0 1em 40px;
+        background-image: url(assets/large-bullet.png) no-repeat;
+    }
+</style>

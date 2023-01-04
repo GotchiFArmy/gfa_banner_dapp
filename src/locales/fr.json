@@ -13,7 +13,19 @@
   },
   "badges": {
     "title": "Tes badges",
-    "loading": "Chargement ...."
+    "loading": "Chargement ....",
+    "approve": {
+      "intro": "Pour pouvoir mint l’insigne, merci d’approuver le contrat de mint ci-dessous",
+      "button": "Approuver",
+      "no_amount": "Vous devez saisir un montant d'au moins { amount } GHST",
+      "tx_title": "Approuver la dépense de {amount} GHST"
+    },
+    "purchase": {
+      "button": "Acheter l'insigne",
+      "input": "Montant en GHST (10 minimum)",
+      "tx_title": "Insigne GFA en cours de distribution",
+      "no_amount": "Vous devez saisir un montant d'au moins { amount } GHST"
+    }
   },
   "newBadge": {
     "title": "Félicitations !!!",
@@ -26,5 +38,20 @@
     "hash": "hash de la transaction",
     "scan": "Voir la transaction dans polygonscan",
     "exception": "Erreur durant la transaction"
+  },
+  "title": "Gotchi Farmy insignia minter",
+  "intro": {
+    "s1": "Vous voulez minter votre insigne GFA et rejoindre la plus grande communauté Francophone sur Aavegotchi ?",
+    "s2": "Alors Vous êtes au bon endroit! L’insigne n°4 de la collection GFA est disponible en édition limitée. Ne loupez par cette opportunité de vous le procurer et par la même occasion de soutenir le travail de la Guilde !",
+    "bullets": "De nombreux avantages à la clé:",
+    "bullets1": "Accès aux channels dédiés pour les membres sur le discord GFA",
+    "bullets2": "Pouvoir de vote pour participer aux votes communautaires de la guild",
+    "bullets3": "Droit de participation exclusifs aux lotteries organisées",
+    "bullets4": "Avantages dans les prochaines compétitions à venir",
+    "bullets5": "Accès au futur Lodge de la GFA dans le gotchiverse",
+    "bullets6": "Des surprises à venir …",
+    "badge": {
+      "supply": "Insigne N°4 - { count } exemplaires disponibles"
+    }
   }
 }

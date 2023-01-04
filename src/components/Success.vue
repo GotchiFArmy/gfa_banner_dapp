@@ -27,10 +27,10 @@ import Gotchi from './reusable/Gotchi.vue';
 
 <template>
     <div class="flex flex-col items-center">
-        <div class="fat_text text-xl text-center mb-2 mt-6" >
+        <div class="fat-text text-xl text-center mb-2 mt-6" >
             {{ (badges.getBadgesArray.length > 1) ? $t('newBadge.title') : $t('welcome.title')}}
         </div>
-        <div class="fat_text text-base text-center my-2" >
+        <div class="fat-text text-base text-center my-2" >
             {{ (badges.getBadgesArray.length > 1) ? $t('newBadge.message') : $t('welcome.message')}}
         </div>
         <div class="flex flex-wrap pt-10 items-center">

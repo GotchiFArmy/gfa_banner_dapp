@@ -11,6 +11,7 @@ export const useApproves = defineStore({
     id: 'approve',
     state: () => {
         return {
+            loaded: false,
             banner4: BigNumber.from(0),
             newBanner: BigNumber.from(0)
         }
@@ -18,6 +19,7 @@ export const useApproves = defineStore({
     actions: {
         async loadApproveStatus() {
             this.banner4 = await loadApproveStatus(import.meta.env.VITE_DISTRIBUTOR)
+            this.loaded = true
             // To use later when 
             // this.newBanner = await loadApproveStatus(import.meta.env.VITE_BANNER4)
         }

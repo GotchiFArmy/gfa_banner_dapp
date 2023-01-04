@@ -39,7 +39,7 @@
 </script>
 
 <template>
-    <div class="w-full h-500px text-center absolute inset-0  z-50" ref="container">
+    <div class="w-full md:h-screen <md:h-full text-center absolute inset-0  z-50" ref="container">
         <!-- <Renderer ref="renderer" :alpha="true" antialias :height="props.height.toString()" :width="props.width.toString()"> -->
         <Renderer ref="renderer" :alpha="true" resize=true antialias>
             <Camera ref="camera" :fov="60" />
