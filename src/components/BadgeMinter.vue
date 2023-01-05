@@ -30,7 +30,7 @@ const minPriceBn = BigNumber.from(parseInt(import.meta.env.VITE_MIN_PRICE)).mul(
 
 async function approveGhst(){
 
-    if (!inputGhst.value) {
+    if (!inputGhst.value || inputGhst.value < parseInt(import.meta.env.VITE_MIN_PRICE)) {
         alert(t('badges.approve.no_amount', { amount: import.meta.env.VITE_MIN_PRICE }))
         inputGhstField.value.focus()
        
@@ -51,7 +51,7 @@ async function approveGhst(){
 }
 
 async function collectBanner(){
-    if (!inputGhst.value) {
+    if (!inputGhst.value || inputGhst.value < parseInt(import.meta.env.VITE_MIN_PRICE)) {
         alert(t('badges.purchase.no_amount', { amount: import.meta.env.VITE_MIN_PRICE }))
         inputGhstField.value.focus()
        
