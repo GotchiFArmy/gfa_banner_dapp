@@ -25,12 +25,11 @@ onBeforeMount( async() => {
 })
 
 const purchasing: Ref<boolean> = ref<boolean>(false)
-const minPriceBn = BigNumber.from(parseInt(import.meta.env.VITE_MIN_PRICE)).mul(BigNumber.from(10).pow(18))
-
+const minPriceBn = BigNumber.from(import.meta.env.VITE_MIN_PRICE).mul(BigNumber.from(10).pow(18))
 
 async function approveGhst(){
 
-    if (!inputGhst.value) {
+    if (!inputGhst.value || inputGhst.value < parseInt(import.meta.env.VITE_MIN_PRICE)) {
         alert(t('badges.approve.no_amount', { amount: import.meta.env.VITE_MIN_PRICE }))
         inputGhstField.value.focus()
        
@@ -51,7 +50,7 @@ async function approveGhst(){
 }
 
 async function collectBanner(){
-    if (!inputGhst.value) {
+    if (!inputGhst.value || inputGhst.value < parseInt(import.meta.env.VITE_MIN_PRICE)) {
         alert(t('badges.purchase.no_amount', { amount: import.meta.env.VITE_MIN_PRICE }))
         inputGhstField.value.focus()
        
@@ -75,11 +74,33 @@ async function collectBanner(){
     }
 }
 
-// function onInputChange() {
-//     if (inputGhst.value && inputGhst.value < 10) {
-//         inputGhst.value = 10
-//     }
-// }
+
+/**
+ * Check conditions to decide if we display approve or purchase buttons
+ */
+function validatePurchaseConditions() {
+    
+    // Input is empty but 10GHST to spend is already approved
+    const minPriceBn = BigNumber.from(import.meta.env.VITE_MIN_PRICE).mul(BigNumber.from(10).pow(18))
+    if (!inputGhst.value && minPriceBn.lte(approved.banner4)) {
+        return true
+    }
+
+    // Input contains an int > 10 and that same amount has been approved
+    if (Number.isInteger(inputGhst.value) && BigNumber.from(inputGhst.value).mul(BigNumber.from(10).pow(18)).lte(approved.banner4)) {
+        return true
+    }
+
+    // Input contains a float > 10 and Input has less than 6 decimals and that same amount has been approved
+    if (inputGhst.value && !Number.isInteger(inputGhst.value) && !Number.isNaN(inputGhst.value)) {
+        const countDecimals = inputGhst.value.toString().split('.')[1].length
+        const inputGhstAsBn = BigNumber.from(inputGhst.value * Math.pow(10, countDecimals)).mul(BigNumber.from(10).pow(18-countDecimals))
+        if (inputGhstAsBn.lte(approved.banner4)) {
+            return true
+        }
+    }
+    return false
+}
 
 </script>
 
@@ -95,17 +116,18 @@ async function collectBanner(){
         />
     </div>
     <template v-if="approved.loaded">
-        <div v-if="(!inputGhst && approved.banner4.lt(minPriceBn))
+        <!-- <div v-if="(!inputGhst && approved.banner4.lt(minPriceBn))
             || (inputGhst && approved.banner4.lt(BigNumber.from(inputGhst).mul(BigNumber.from(10).pow(18))))"
-        >
-            <p class="text-base mt-4">{{ $t('badges.approve.intro') }}</p>
-            <div class="flex flex-row place-content-center my-6">
-                <button class="button" @click="approveGhst">{{ $t('badges.approve.button') }}</button>
+        > -->
+        <div v-if="validatePurchaseConditions()">
+            <div v-if="!purchasing" class="flex flex-row place-content-center my-6">
+                <button class="button" @click="collectBanner">{{ $t('badges.purchase.button') }}</button>
             </div>
         </div>
         <div v-else>
-            <div v-if="!purchasing" class="flex flex-row place-content-center my-6">
-                <button class="button" @click="collectBanner">{{ $t('badges.purchase.button') }}</button>
+            <p class="text-base mt-4">{{ $t('badges.approve.intro') }}</p>
+            <div class="flex flex-row place-content-center my-6">
+                <button class="button" @click="approveGhst">{{ $t('badges.approve.button') }}</button>
             </div>
         </div>
     </template>
