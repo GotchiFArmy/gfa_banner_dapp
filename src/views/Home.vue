@@ -45,7 +45,7 @@ watch(network, async (newNetwork, oldNetwork) => {
 </script>
 
 <template>
-    <div class="container bg-gfa-dark text-gfa-white font-sans md:h-screen <md:h-full <md:pb-30" ref="container">
+    <div class="container bg-gfa-dark text-gfa-white font-sans max-h-full min-h-screen <md:pb-30" ref="container">
         <div class="flex flex-col z-1 mx-5 lg:w-8/10 lg:mx-auto xl:w-7/10 2xl:w-6/10">
             <Banner />
             <template v-if="address != ''">
@@ -59,13 +59,15 @@ watch(network, async (newNetwork, oldNetwork) => {
             <template v-else>
                 <div class="flex flex-row mb-10">
                     <span>
-                        {{ $t('intro.s1') }} <br />
-                        {{ $t('intro.s2') }}<br /><br />
-                        <div class="flex flex-col justify-center items-center mt-5 mb-15">
+                        {{ $t('intro.s1') }}<br />
+                        <p v-html="$t('intro.s2')" />
+                        <div class="flex flex-col justify-center items-center mt-5 mb-10">
                             <img :src="badges.badge4.url" width="80" alt="{{ badges.badge4.name }}" />
-                            <span @if="badges.remainingBadge4 && badges.remainingBadge4 > 0" class="mt-5">
-                                {{ $t('intro.badge.supply', { count: badges.remainingBadge4 }) }}
-                            </span>
+                            <span 
+                                @if="badges.remainingBadge4 && badges.remainingBadge4 > 0" 
+                                v-html="$t('intro.badge.supply', { count: badges.remainingBadge4 })"
+                                class="mt-5" 
+                            />
                         </div>
                         {{ $t('intro.bullets') }}<br />
                         <ul class="list-disc list-inside">
