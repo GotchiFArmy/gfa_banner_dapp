@@ -5,7 +5,7 @@ const badges = useBadges();
 </script>
 
 <template>
-    <div class="flex flex-row justify-center items-center mt-5 mb-15">
+    <div class="flex flex-row justify-center items-center mt-5 md:mb-15 <md:mb-5">
         <div class="mx-10 <md:hidden">
             <img :src="badges.badge3.url" width="80" alt="{{ badges.badge3.name }}" />
         </div>

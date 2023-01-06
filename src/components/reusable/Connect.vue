@@ -14,6 +14,6 @@ const { open } = useBoard()
         <div v-if="address == ''" class="mt-4 leading-tight text-center pt-6">
             <button class="button" @click="open">{{ $t('wallet.connect')}}</button>
         </div>
-        <Gotchi :url="boss" class="mt-6" />
+        <Gotchi :url="boss" class="my-6" />
     </div>    
 </template>
