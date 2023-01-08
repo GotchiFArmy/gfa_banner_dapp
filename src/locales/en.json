@@ -1,6 +1,6 @@
 {
   "wallet": {
-    "not_connected": "Vous devez connecter votre wallet pour obtenir votre insigne",
+    "not_connected": "You need to connect votre wallet pour obtenir votre insigne",
     "connect": "Connecter mon wallet",
     "connected": "connecté"
   },
