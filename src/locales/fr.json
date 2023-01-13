@@ -39,14 +39,14 @@
     "scan": "Voir la transaction dans polygonscan",
     "exception": "Erreur durant la transaction"
   },
-  "title": "Gotchi Farmy insignia minter",
+  "title": "Gotchi FArmy Mint space",
   "intro": {
     "s1": "Vous voulez MINT votre insigne GFA et rejoindre la plus grande communauté Francophone sur Aavegotchi ? Alors vous êtes au bon endroit !",
-    "s2": "L’insigne n°4 de la collection GFA est disponible en <span class='text-gfa-pink'>édition limitée</span>. Ne loupez par cette opportunité de vous le procurer et par la même occasion de soutenir le travail de la Guilde !",
+    "s2": "L’insigne n°4 de la collection GFA est disponible en <span class='text-gfa-pink'>édition limitée</span>. Ne loupez pas cette opportunité de vous le procurer et par la même occasion de soutenir le travail de la Guilde !",
     "bullets": "De nombreux avantages à la clé:",
     "bullets1": "Accès aux channels dédiés pour les membres sur le discord GFA",
     "bullets2": "Pouvoir de vote pour participer aux votes communautaires de la guild",
-    "bullets3": "Droit de participation exclusifs aux lotteries organisées",
+    "bullets3": "Droit de participation aux lotteries privés GFA",
     "bullets4": "Avantages dans les prochaines compétitions à venir",
     "bullets5": "Accès au futur Lodge de la GFA dans le gotchiverse",
     "bullets6": "Des surprises à venir …",
