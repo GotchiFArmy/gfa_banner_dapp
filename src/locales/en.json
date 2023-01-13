@@ -1,35 +1,58 @@
 {
   "wallet": {
-    "not_connected": "You need to connect your wallet in order to mint your insignia",
-    "connect": "Connect",
-    "connected": "connected"
+    "not_connected": "You need to connect your wallet to get the new Insignia",
+    "connect": "Connect my Wallet",
+    "connected": "Connected !"
   },
   "welcome": {
-    "title": "Welcome Fren !",
-    "message": "You are now a brand new member of the GotchiFarmy gang !!"
+    "title": "Welcome Fren",
+    "message": "You are now a truly member of the GFA community !!"
   },
   "badges_display": {
-    "no_badges": "You do not own ant GFA insignia"
+    "no_badges": "You don't own a GFA Insignia yet... "
   },
   "badges": {
     "title": "Your insignias",
     "loading": "Loading ....",
-    "approve": {},
-    "purchase": {}
+    "approve": {
+      "intro": "In order to mint your Insignia, please approve the mint contract",
+      "button": "Approve",
+      "no_amount": "Please enter at least { amount } GHST",
+      "tx_title": "Approve spending {amount} GHST"
+    },
+    "purchase": {
+      "button": "Buy the Insignia",
+      "input": "Prince in GHST (10 minimum)",
+      "tx_title": "GFA's Insigna distribution in progress ...",
+      "no_amount": "Please enter at least a price of { amount } GHST"
+    }
   },
   "newBadge": {
     "title": "Congratulations !!!",
-    "message": "You just added a brand new insignia to your collection !"
+    "message": "You just added a new badge to your collection !"
   },
   "tx": {
-    "validate": "Please review & confirm the transaction on your wallet",
+    "validate": "Please validate the transaction in your wallet",
     "in_progress": "Transaction in progress",
-    "failed": "Transaction has failed",
-    "hash": "Transaction hash",
-    "scan": "See the tx in polygonscan",
-    "exception": "An error has occured during the transaction"
+    "failed": "The transaction failed",
+    "hash": "Transaction's hash",
+    "scan": "See the transaction on polygonscan",
+    "exception": "Error during the transaction",
+    "success": "Transaction succeeded"
   },
+  "title": "Gotchi Farmy insignia mint page",
   "intro": {
-    "badge": {}
+    "s1": "You want to MINT your GFA Insignia and join the largest Froggy community on Aavegotchi ? You are at the right place ! ",
+    "s2": "GFA collection's Insigna #4 is available in a <span class='text-gfa-pink'>limited edition</span>. Don't miss this opportunity to get it and at the same time to support the work of the guild members !",
+    "bullets": "A lot of benefits are coming with it:",
+    "bullets1": "Access to exclusive dedicated discord channels for GFA members",
+    "bullets2": "Own a voting power to participate in our Guild community votes",
+    "bullets3": "Exclusive participation access to GFA private raffles",
+    "bullets4": "Benefits in the futur contests to come (Crew3, Sandbox, ...)",
+    "bullets5": "Access granted to the futur GFA lodge in the gotchiverse for the Communal Channeling",
+    "bullets6": "Some surprises coming …",
+    "badge": {
+      "supply": " <span class='text-gfa-pink'> { count } </span> Insignia #4 available"
+    }
   }
 }
