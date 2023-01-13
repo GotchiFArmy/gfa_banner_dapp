@@ -37,7 +37,8 @@
     "failed": "The transaction failed",
     "hash": "Transaction's hash",
     "scan": "See the transaction on polygonscan",
-    "exception": "Error during the transaction"
+    "exception": "Error during the transaction",
+    "success": "Transaction succeeded"
   },
   "title": "Gotchi Farmy insignia mint page",
   "intro": {

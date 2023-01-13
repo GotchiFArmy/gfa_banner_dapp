@@ -37,7 +37,8 @@
     "failed": "La transaction a échoué",
     "hash": "hash de la transaction",
     "scan": "Voir la transaction dans polygonscan",
-    "exception": "Erreur durant la transaction"
+    "exception": "Erreur durant la transaction",
+    "success": "Transaction réussie"
   },
   "title": "Gotchi FArmy Mint space",
   "intro": {
