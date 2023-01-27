@@ -77,6 +77,9 @@ watch(network, async (newNetwork, oldNetwork) => {
                             <li>{{ $t('intro.bullets4') }}</li>
                             <li>{{ $t('intro.bullets5') }}</li>
                             <li>{{ $t('intro.bullets6') }}</li>
+                            <li>{{ $t('intro.bullets7') }}</li>
+                            <li>{{ $t('intro.bullets8') }}</li>
+                            <li>{{ $t('intro.bullets9') }}</li>
                         </ul>
                     </span>
                 </div>
