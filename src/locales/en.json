@@ -45,12 +45,15 @@
     "s1": "You want to MINT your GFA Insignia and join the largest Froggy community on Aavegotchi ? You are at the right place ! ",
     "s2": "GFA collection's Insigna #4 is available in a <span class='text-gfa-pink'>limited edition</span>. Don't miss this opportunity to get it and at the same time to support the work of the guild members !",
     "bullets": "A lot of benefits are coming with it:",
-    "bullets1": "Access to exclusive dedicated discord channels for GFA members",
-    "bullets2": "Own a voting power to participate in our Guild community votes",
-    "bullets3": "Exclusive participation access to GFA private raffles",
-    "bullets4": "Benefits in the futur contests to come (Crew3, Sandbox, ...)",
-    "bullets5": "Access granted to the futur GFA lodge in the gotchiverse for the Communal Channeling",
-    "bullets6": "Some surprises coming …",
+    "bullets1": "Free petting for all your gotchis",
+    "bullets2": "Access to our Discord bot tio set up your own bazaar alerts",
+    "bullets3": "Access to exclusive dedicated discord channels for GFA members",
+    "bullets4": "Own a voting power to participate in our Guild community votes",
+    "bullets5": "Access to exclusive on-chain aavegotchi GFA tools",
+    "bullets6": "Exclusive participation access to GFA private raffles",
+    "bullets7": "Benefits in the futur contests to come (Crew3, Sandbox, ...)",
+    "bullets8": "Access granted to the futur GFA lodge in the gotchiverse for the Communal Channeling",
+    "bullets9": "Some surprises coming …", 
     "badge": {
       "supply": " <span class='text-gfa-pink'> { count } </span> Insignia #4 available"
     }
