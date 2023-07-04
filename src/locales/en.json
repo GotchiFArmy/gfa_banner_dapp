@@ -22,7 +22,7 @@
     },
     "purchase": {
       "button": "Buy the Insignia",
-      "input": "Prince in GHST (10 minimum)",
+      "input": "Price in GHST ({amount} minimum)",
       "tx_title": "GFA's Insigna distribution in progress ...",
       "no_amount": "Please enter at least a price of { amount } GHST"
     }

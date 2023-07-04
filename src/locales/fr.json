@@ -22,7 +22,7 @@
     },
     "purchase": {
       "button": "Acheter l'insigne",
-      "input": "Montant en GHST (10 minimum)",
+      "input": "Montant en GHST ({amount} minimum)",
       "tx_title": "Insigne GFA en cours de distribution",
       "no_amount": "Vous devez saisir un montant d'au moins { amount } GHST"
     }
