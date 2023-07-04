@@ -108,7 +108,7 @@ function validatePurchaseConditions() {
     <div class="flex flex-row items-center mt-4">
         <p class="mr-4">{{ $t('badges.purchase.input') }}</p>
         <input 
-            placeholder="10"
+            placeholder="50"
             type="number" 
             v-model="inputGhst" 
             ref="inputGhstField"
