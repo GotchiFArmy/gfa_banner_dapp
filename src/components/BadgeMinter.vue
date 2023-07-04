@@ -106,7 +106,7 @@ function validatePurchaseConditions() {
 
 <template>
     <div class="flex flex-row items-center mt-4">
-        <p class="mr-4">{{ $t('badges.purchase.input', { amount: import.meta.env.VITE_MIN_PRICE }) }}</p>
+        <p class="mr-4">{{ $t('badges.purchase.input') }}</p>
         <input 
             placeholder="50"
             type="number" 
